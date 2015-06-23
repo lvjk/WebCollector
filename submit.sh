@@ -13,5 +13,5 @@ cp -r /home/hu/mygit/WebCollector/*.java ./
 
 
 git add --all
-git commit -am '2.08'
+git commit -m '2.08'
 git push
