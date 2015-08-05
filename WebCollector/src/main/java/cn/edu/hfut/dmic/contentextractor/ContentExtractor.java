@@ -323,10 +323,10 @@ public class ContentExtractor {
             }
         }
 
-        Elements titles = doc.body().select("#title,.title");
+        Elements titles = doc.body().select("*[id^=title],*[id$=title],*[class^=title],*[class$=title]");
         if (titles.size() > 0) {
             String title = titles.first().text();
-            if (title.length() > 5) {
+            if (title.length() > 5 && title.length()<40) {
                 return titles.first().text();
             }
         }
