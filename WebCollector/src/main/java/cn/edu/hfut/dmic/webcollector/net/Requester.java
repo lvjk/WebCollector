@@ -15,21 +15,14 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cn.edu.hfut.dmic.webcollector.fetcher;
+package cn.edu.hfut.dmic.webcollector.net;
 
-import cn.edu.hfut.dmic.webcollector.model.CrawlDatums;
-import cn.edu.hfut.dmic.webcollector.model.Page;
+import cn.edu.hfut.dmic.webcollector.model.CrawlDatum;
 
 /**
  *
  * @author hu
  */
-public interface Visitor {
-
-    public abstract void visit(Page page, CrawlDatums next);
-
-    public abstract void afterVisit(Page page, CrawlDatums next);
-
-    public abstract void fail(Page page, CrawlDatums next);
-
+public interface Requester {
+     public HttpResponse getResponse(CrawlDatum crawlDatum) throws Exception;
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 hu
+ * Copyright (C) 2014 hu
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,21 +15,27 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cn.edu.hfut.dmic.webcollector.fetcher;
+package cn.edu.hfut.dmic.webcollector.crawldb;
 
-import cn.edu.hfut.dmic.webcollector.model.CrawlDatums;
-import cn.edu.hfut.dmic.webcollector.model.Page;
+import cn.edu.hfut.dmic.webcollector.model.CrawlDatum;
 
 /**
+ * 抓取任务生成器
  *
  * @author hu
  */
-public interface Visitor {
+public interface Generator {
 
-    public abstract void visit(Page page, CrawlDatums next);
+    public CrawlDatum next();
+    
+    public void open() throws Exception;
 
-    public abstract void afterVisit(Page page, CrawlDatums next);
+    public void setTopN(int topN);
 
-    public abstract void fail(Page page, CrawlDatums next);
+    public void setMaxRetry(int maxRetry);
+
+    public int getTotalGenerate();
+
+    public void close() throws Exception;
 
 }

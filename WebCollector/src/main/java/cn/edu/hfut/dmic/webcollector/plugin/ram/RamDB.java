@@ -15,21 +15,19 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cn.edu.hfut.dmic.webcollector.fetcher;
+package cn.edu.hfut.dmic.webcollector.plugin.ram;
 
-import cn.edu.hfut.dmic.webcollector.model.CrawlDatums;
-import cn.edu.hfut.dmic.webcollector.model.Page;
+import cn.edu.hfut.dmic.webcollector.model.CrawlDatum;
+import java.util.HashMap;
 
 /**
  *
  * @author hu
  */
-public interface Visitor {
+public class RamDB {
 
-    public abstract void visit(Page page, CrawlDatums next);
-
-    public abstract void afterVisit(Page page, CrawlDatums next);
-
-    public abstract void fail(Page page, CrawlDatums next);
-
+    protected HashMap<String, CrawlDatum> crawlDB = new HashMap<String, CrawlDatum>();
+    protected HashMap<String, CrawlDatum> fetchDB = new HashMap<String, CrawlDatum>();
+    protected HashMap<String, CrawlDatum> linkDB = new HashMap<String, CrawlDatum>();
+    protected HashMap<String, String> redirectDB = new HashMap<String, String>();
 }

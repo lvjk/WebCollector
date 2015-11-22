@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 hu
+ * Copyright (C) 2014 hu
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,21 +15,26 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cn.edu.hfut.dmic.webcollector.fetcher;
+package cn.edu.hfut.dmic.webcollector.crawldb;
 
+import cn.edu.hfut.dmic.webcollector.model.CrawlDatum;
 import cn.edu.hfut.dmic.webcollector.model.CrawlDatums;
-import cn.edu.hfut.dmic.webcollector.model.Page;
 
 /**
+ * 爬取过程中，写入爬取历史、网页Content、解析信息的Writer
  *
  * @author hu
  */
-public interface Visitor {
+public interface SegmentWriter {
 
-    public abstract void visit(Page page, CrawlDatums next);
+    public void initSegmentWriter() throws Exception;
 
-    public abstract void afterVisit(Page page, CrawlDatums next);
+    public void wrtieFetchSegment(CrawlDatum fetchDatum) throws Exception;
 
-    public abstract void fail(Page page, CrawlDatums next);
+    public void writeRedirectSegment(CrawlDatum datum, String realUrl) throws Exception;
+
+    public void wrtieParseSegment(CrawlDatums parseDatums) throws Exception;
+
+    public void closeSegmentWriter() throws Exception;
 
 }

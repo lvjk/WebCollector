@@ -15,21 +15,17 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package cn.edu.hfut.dmic.webcollector.fetcher;
-
-import cn.edu.hfut.dmic.webcollector.model.CrawlDatums;
-import cn.edu.hfut.dmic.webcollector.model.Page;
+package cn.edu.hfut.dmic.webcollector.crawldb;
 
 /**
  *
  * @author hu
  */
-public interface Visitor {
+public interface DBLock {
 
-    public abstract void visit(Page page, CrawlDatums next);
+    public void lock() throws Exception;
 
-    public abstract void afterVisit(Page page, CrawlDatums next);
+    public boolean isLocked() throws Exception;
 
-    public abstract void fail(Page page, CrawlDatums next);
-
+    public void unlock() throws Exception;
 }
