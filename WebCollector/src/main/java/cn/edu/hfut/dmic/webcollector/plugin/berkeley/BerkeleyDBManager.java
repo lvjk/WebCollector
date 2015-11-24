@@ -56,6 +56,7 @@ public class BerkeleyDBManager extends DBManager {
         DatabaseEntry value = new DatabaseEntry();
         if (!force) {
             if (database.get(null, key, value, LockMode.DEFAULT) == OperationStatus.SUCCESS) {
+                database.close();
                 return;
             }
         }
@@ -130,12 +131,18 @@ public class BerkeleyDBManager extends DBManager {
 
     @Override
     public void closeSegmentWriter() throws Exception {
-        fetchDatabase.sync();
-        linkDatabase.sync();
-        fetchDatabase.close();
-        linkDatabase.close();
-        redirectDatabase.sync();
-        redirectDatabase.close();
+        if (fetchDatabase != null) {
+            fetchDatabase.sync();
+            fetchDatabase.close();
+        }
+        if (linkDatabase != null) {
+            linkDatabase.sync();
+            linkDatabase.close();
+        }
+        if (redirectDatabase != null) {
+            redirectDatabase.sync();
+            redirectDatabase.close();
+        }
     }
 
     @Override
