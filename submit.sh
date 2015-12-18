@@ -17,5 +17,5 @@ rm -rf Lazy/target
 
 
 git add --all
-git commit -m 'webcollector-nutch'
+git commit -m 'lazy-0.11'
 git push
