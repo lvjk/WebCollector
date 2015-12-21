@@ -17,5 +17,5 @@ rm -rf Lazy/target
 
 
 git add --all
-git commit -m '2.25'
+git commit -m '2.26'
 git push
