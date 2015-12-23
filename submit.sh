@@ -3,11 +3,11 @@ rm *.zip
 rm *.md
 rm *.java
 rm -r WebCollector
-rm -r WebCollector-Nutch
+rm -r WebCollector-Hadoop
 rm -r Lazy 
 
 cp -r /home/hu/mygit/WebCollector/WebCollector ./
-cp -r /home/hu/mygit/WebCollector/WebCollector-Nutch ./
+cp -r /home/hu/mygit/WebCollector/WebCollector-Hadoop ./
 cp -r /home/hu/mygit/WebCollector/Lazy ./
 cp -r /home/hu/mygit/WebCollector/*.zip ./
 cp -r /home/hu/mygit/WebCollector/*.md ./
@@ -17,5 +17,5 @@ rm -rf Lazy/target
 
 
 git add --all
-git commit -m 'lazy-kmeans'
+git commit -m 'WebCollector-Hadoop'
 git push
