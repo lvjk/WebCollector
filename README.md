@@ -16,18 +16,6 @@ WebCollector is an open source web crawler framework based on Java.It provides
 
 ##Installation
 
-### Using Maven
-
-To use the latest release of WebCollector, please use the following snippet in your pom.xml
-
-```xml
-    <dependency>
-        <groupId>cn.edu.hfut.dmic.webcollector</groupId>
-        <artifactId>WebCollector</artifactId>
-        <version>2.09</version>
-    </dependency>
-```
-
 ### Without Maven
 WebCollector jars are available on the [HomePage](https://github.com/CrawlScript/WebCollector).
 
@@ -123,11 +111,6 @@ WebCollector could automatically extract content from news web-pages:
     Element contentElement = ContentExtractor.getContentElementByUrl(url);
 
 
-
-
-
-
-
-###Other Documentation
+##Other Documentation
 
 + [中文文档](https://github.com/CrawlScript/WebCollector/blob/master/README.zh-cn.md)

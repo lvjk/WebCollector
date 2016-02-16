@@ -7,8 +7,8 @@ WebCollector是一个无须配置、便于二次开发的JAVA爬虫框架（内�
 ###爬虫内核：
 WebCollector致力于维护一个稳定、可扩的爬虫内核，便于开发者进行灵活的二次开发。内核具有很强的扩展性，用户可以在内核基础上开发自己想要的爬虫。源码中集成了Jsoup，可进行精准的网页解析。
 
-###文档:
-[WebCollector-GitDoc](https://github.com/CrawlScript/WebCollector-GitDoc)
+###教程:
+WebCollector的开源中国项目主页中可找到教程列表：[http://www.oschina.net/p/webcollector](http://www.oschina.net/p/webcollector)
 
 
 ###2.x：
@@ -23,15 +23,6 @@ WebCollector 2.x版本特性：
  * 8）使用slf4j作为日志门面，可对接多种日志
 
 
-###Maven：
-目前Maven中央仓库更新到2.09版，推荐使用2.20以上版本，2.20所需jar包可从github主页下载
-```xml
-    <dependency>
-        <groupId>cn.edu.hfut.dmic.webcollector</groupId>
-        <artifactId>WebCollector</artifactId>
-        <version>2.09</version>
-    </dependency>
-```
 
 ###Jar包
 可在[WebCollector的github主页](https://github.com/CrawlScript/WebCollector)下载所需jar包.
@@ -39,8 +30,17 @@ WebCollector 2.x版本特性：
 + __webcollector-version-bin.zip__ 包含核心jar包.
 
 
-###教程
-[WebCollector 2.x教程列表](https://github.com/CrawlScript/WebCollector-GitDoc/tree/master/doc)
+
+
+###__通过捐款支持WebCollector__
+
+
+维护WebCollector及教程需要花费较大的时间和精力，如果你喜欢WebCollector的话，欢迎通过捐款的方式，支持开发者的工作，非常感谢！
+
+你可以使用支付宝钱包扫描下方的二维码进行捐款， 或者通过向支付宝帐号 __hujunxianligong@126.com__转帐进行捐款。
+
+<img src="http://img.blog.csdn.net/20160216133214332" width="200px"></img>
+
 
 
 
