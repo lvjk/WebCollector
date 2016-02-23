@@ -6,16 +6,16 @@ rm -r WebCollector
 rm -r WebCollector-Hadoop
 rm -r Lazy 
 
-cp -r /home/hu/mygit/WebCollector/WebCollector ./
-cp -r /home/hu/mygit/WebCollector/WebCollector-Hadoop ./
-cp -r /home/hu/mygit/WebCollector/Lazy ./
-cp -r /home/hu/mygit/WebCollector/*.zip ./
-cp -r /home/hu/mygit/WebCollector/*.md ./
-cp -r /home/hu/mygit/WebCollector/*.java ./
+cp -r ../../WebCollector/WebCollector ./
+cp -r ../../WebCollector/WebCollector-Hadoop ./
+cp -r ../../WebCollector/Lazy ./
+cp -r ../../WebCollector/*.zip ./
+cp -r ../../WebCollector/*.md ./
+cp -r ../../WebCollector/*.java ./
 
 rm -rf Lazy/target
 
 
 git add --all
-git commit -m 'doc'
+git commit -m '2.27'
 git push
